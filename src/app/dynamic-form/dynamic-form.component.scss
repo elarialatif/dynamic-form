@@ -1,0 +1,68 @@
+.user-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+
+  .form-group {
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+    input {
+      padding: 0.5rem;
+      width: 300px;
+    }
+  }
+
+  .remove-button {
+    margin-top: 30px;
+  }
+}
+.submit_btn {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+  button {
+    padding: 0.5rem;
+    width: 315px;
+    background-color: green;
+    border: 1px solid green;
+    color: #fff;
+    cursor: pointer;
+  }
+
+}
+.add-button {
+  margin-top: 20px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  .delete_btn {
+    background-color: red;
+    color: #fff;
+    border: 1px solid red;
+    cursor: pointer;
+  }
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

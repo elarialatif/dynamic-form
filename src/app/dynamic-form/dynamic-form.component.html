@@ -1,0 +1,53 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div *ngFor="let user of users; let i = index" class="user-container">
+    <div class="form-group">
+      <label for="name{{i}}">Name</label>
+      <input type="text" id="name{{i}}" formControlName="name" appCustomValidation />
+      <div *ngIf="userForm.get('name')?.hasError('required')" class="error-message">
+        Name is required.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="age{{i}}">Age</label>
+      <input type="number" id="age{{i}}" formControlName="age" appCustomValidation />
+      <div *ngIf="userForm.get('age')?.hasError('required')" class="error-message">
+        Age is required.
+      </div>
+      <div *ngIf="userForm.get('age')?.hasError('min')" class="error-message">
+        Age must be > 18.
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email{{i}}">Email</label>
+      <input type="email" id="email{{i}}" formControlName="email" appCustomValidation>
+      <div *ngIf="userForm.get('email')?.hasError('required')" class="error-message">
+        Email is required.
+      </div>
+      <div *ngIf="userForm.get('email')?.hasError('email')" class="error-message">
+        Invalid email address.
+      </div>
+    </div>
+  </div>
+  <div class="submit_btn">
+    <button type="submit" [disabled]="!userForm.valid" class="submit-button">Submit</button>
+  </div>
+</form>
+<!-- Table to display user input data -->
+<table class="user-table" *ngIf="userData.length > 0">
+  <thead>
+    <tr>
+      <th *ngFor="let column of tableColumns">{{ column }}</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData; let i = index">
+      <td *ngFor="let column of tableColumns">
+        {{ user[column] }}
+      </td>
+      <td>
+        <button class="delete_btn" type="button" (click)="deleteUser(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
