@@ -17,3 +17,7 @@ The application will be available at http://localhost:4200/. The app will automa
 - Form Validation
 - The form validates input fields according to their types.
 - Error messages will be displayed for validation errors.
+
+
+## For Your Information
+- I already created custom directive that will use for validation form input.
