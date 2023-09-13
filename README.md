@@ -11,9 +11,9 @@ Start the development server:
 The application will be available at http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
 ## Usage
-Use the "Add Field" button to add new input fields dynamically.
-Use the "Remove" button to remove existing fields.
-Submit the form to see the collected data in the table.
-Form Validation
-The form validates input fields according to their types.
-Error messages will be displayed for validation errors.
+- Use the "Add Field" button to add new input fields dynamically.
+- Use the "Remove" button to remove existing fields.
+- Submit the form to see the collected data in the table.
+- Form Validation
+- The form validates input fields according to their types.
+- Error messages will be displayed for validation errors.
